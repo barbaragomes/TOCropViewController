@@ -61,6 +61,7 @@
     
     _doneTextButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _doneTextButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    _doneTextButton.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     [_doneTextButton setTitle:NSLocalizedStringFromTableInBundle(@"Done",
                                                                  @"TOCropViewControllerLocalizable",
                                                                  [NSBundle bundleForClass:[self class]],
@@ -79,6 +80,7 @@
     
     _cancelTextButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _cancelTextButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    _cancelTextButton.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     [_cancelTextButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_cancelTextButton setTitle:NSLocalizedStringFromTableInBundle(@"Cancel",
                                                                    @"TOCropViewControllerLocalizable",
@@ -98,6 +100,7 @@
     _clampButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _clampButton.contentMode = UIViewContentModeCenter;
     _clampButton.tintColor = [UIColor whiteColor];
+    _clampButton.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     [_clampButton setImage:[TOCropToolbar clampImage] forState:UIControlStateNormal];
     [_clampButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_clampButton];
@@ -105,6 +108,7 @@
     _rotateButton = [UIButton buttonWithType:UIButtonTypeSystem];
     _rotateButton.contentMode = UIViewContentModeCenter;
     _rotateButton.tintColor = [UIColor whiteColor];
+    _rotateButton.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     [_rotateButton setImage:[TOCropToolbar rotateImage] forState:UIControlStateNormal];
     [_rotateButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_rotateButton];
@@ -113,6 +117,7 @@
     _resetButton.contentMode = UIViewContentModeCenter;
     _resetButton.tintColor = [UIColor whiteColor];
     _resetButton.enabled = NO;
+    _resetButton.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     [_resetButton setImage:[TOCropToolbar resetImage] forState:UIControlStateNormal];
     [_resetButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_resetButton];

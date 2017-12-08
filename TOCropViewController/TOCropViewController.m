@@ -79,7 +79,7 @@
 
     BOOL landscapeLayout = CGRectGetWidth(self.view.frame) > CGRectGetHeight(self.view.frame);
     self.cropView = [[TOCropView alloc] initWithImage:self.image];
-    self.cropView.frame = (CGRect){(landscapeLayout ? 44.0f : 0.0f),0,(CGRectGetWidth(self.view.bounds) - (landscapeLayout ? 44.0f : 0.0f)), (CGRectGetHeight(self.view.bounds)-(landscapeLayout ? 0.0f : 44.0f)) };
+    self.cropView.frame = (CGRect){(landscapeLayout ? 74.0f : 0.0f),74.0,(CGRectGetWidth(self.view.bounds) - (landscapeLayout ? 74.0f : 0.0f)), (CGRectGetHeight(self.view.bounds)-(landscapeLayout ? 0.0f : 74.0f)) };
     self.cropView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.cropView.delegate = self;
     [self.view addSubview:self.cropView];
@@ -159,12 +159,12 @@
         frame = self.toolbar.frame;
         frame.origin.x = 0.0f;
         frame.origin.y = 0.0f;
-        frame.size.width = 44.0f;
+        frame.size.width = 74.0f;
         frame.size.height = CGRectGetHeight(self.view.frame);
     }
     else {
         frame.origin.x = 0.0f;
-        frame.origin.y = CGRectGetHeight(self.view.bounds) - 44.0f;
+        frame.origin.y = 20.0f;//CGRectGetHeight(self.view.bounds) - 44.0f;
         frame.size.width = CGRectGetWidth(self.view.bounds);
         frame.size.height = 44.0f;
     }
@@ -179,8 +179,8 @@
     BOOL verticalLayout = CGRectGetWidth(self.view.bounds) > CGRectGetHeight(self.view.bounds);
     if (verticalLayout ) {
         CGRect frame = self.cropView.frame;
-        frame.origin.x = 44.0f;
-        frame.size.width = CGRectGetWidth(self.view.bounds) - 44.0f;
+        frame.origin.x = 74.0f;
+        frame.size.width = CGRectGetWidth(self.view.bounds) - 74.0f;
         frame.size.height = CGRectGetHeight(self.view.bounds);
         self.cropView.frame = frame;
     }
@@ -188,7 +188,7 @@
         CGRect frame = self.cropView.frame;
         frame.origin.x = 0.0f;
         frame.size.width = CGRectGetWidth(self.view.bounds);
-        frame.size.height = CGRectGetHeight(self.view.bounds) - 44.0f;
+        frame.size.height = CGRectGetHeight(self.view.bounds) - 74.0f;
         self.cropView.frame = frame;
     }
     
